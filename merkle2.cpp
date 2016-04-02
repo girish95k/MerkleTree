@@ -16,7 +16,7 @@ template <typename T>
 class Merkle
 {
 	public:
-	Merkle(initializer_list<T>);
+	Merkle(T);
 	Merkle(int);
 	Merkle();
 	Merkle(const Merkle&);
@@ -29,7 +29,7 @@ class Merkle
 };
 
 template <typename T>
-Merkle<T>::Merkle(initializer_list<T> list)
+Merkle<T>::Merkle(T list)
 {
 	copy(list.begin(), list.end(), elements);
 }
